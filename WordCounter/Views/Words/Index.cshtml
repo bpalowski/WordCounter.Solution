@@ -1,0 +1,16 @@
+<h1>Your Words</h1>
+<ul>
+  @foreach(var yo in Model)
+  {
+    <li>@yo.GetWord()</li>
+    <li>@yo.GetString()</li>
+    <li>@yo.WordTotal()</li>
+  }
+</ul>
+<p><a href="/counter/new">Add another Word</a></p>
+<form action="/counter/delete" method="post">
+  <button type="submit" name="button">Clear All Words</button>
+</form>
+<!-- <form action="/items/delete" method="post">
+  <button type="submit" name="button">Clear All Items</button>
+</form> -->
